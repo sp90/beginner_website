@@ -1,30 +1,25 @@
-# Contentful Javascript boilerplate project
+# Website getting started
 
-Boilerplate project for getting started using javascript with Contentful
+Boilerplate project for simple website
 
 ## Prerequisites
 
--   **Node** v4.7.2 or greater
-
--   **npm** v2.14 or **yarn** v0.19.1
+-   **Node** 
+-   **npm**
 
 ## Start the project
 
-clone the project using the following command:
+Clone the project using the following command:
 
 ```bash
-git clone https://github.com/contentful/boilerplate-javascript.git
-```
-
-Open the _boilerplate-javascript_ directory and update the _index.js_ file with your API credentials as follows:
-
-```js
-var SPACE_ID = '<space_id>'
-var ACCESS_TOKEN = '<access_token>'
+git clone https://github.com/sp90/beginner_website.git
 ```
 
 Run the project using:
 
 ```shell
 npm start
+
+# New tab
+npm run gulp
 ```
