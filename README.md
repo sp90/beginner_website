@@ -6,6 +6,7 @@ Boilerplate project for simple website
 
 -   **Node** 
 -   **npm**
+-   **nodemon**
 
 ## Start the project
 
@@ -24,6 +25,10 @@ git clone https://github.com/sp90/beginner_website.git
 Run the project using:
 
 ```shell
+# Install nodemon
+npm i -g nodemon
+
+# start server
 npm start
 
 # New tab
