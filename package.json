@@ -4,8 +4,7 @@
   "description": "A boilerplate javascript project",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "prestart": "echo \"\\x1b[32m\\033[4mInstalling dependencies:\" && npm install && echo \"\\x1b[32mdone.\\033[0m\""
+    "start": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +25,7 @@
   },
   "homepage": "https://github.com/contentful/boilerplate-javascript#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "compression": "^1.7.1",
     "config": "^1.28.1",
     "consolidate": "^0.15.0",

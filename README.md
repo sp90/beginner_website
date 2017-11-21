@@ -9,6 +9,12 @@ Boilerplate project for simple website
 
 ## Start the project
 
+Install node/npm
+
+```bash
+brew install node
+```
+
 Clone the project using the following command:
 
 ```bash
