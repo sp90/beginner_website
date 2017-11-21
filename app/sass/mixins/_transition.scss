@@ -1,0 +1,15 @@
+@mixin transition($properties, $settings, $will-change: false) {
+  $full-prop-list: ();
+  $slim-prop-list: ();
+
+  @each $prop in $properties {
+    $full-prop-list: append($full-prop-list, $prop $settings, 'comma');
+    $slim-prop-list: append($slim-prop-list, $prop, 'comma');
+  }
+
+  transition: $full-prop-list;
+
+  @if $will-change == true {
+    will-change: $slim-prop-list;
+  }
+}

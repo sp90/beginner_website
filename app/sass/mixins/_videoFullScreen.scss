@@ -1,0 +1,5 @@
+@mixin videoFullScreen {
+  &::-webkit-media-controls-fullscreen-button {
+    @content;
+  }
+}

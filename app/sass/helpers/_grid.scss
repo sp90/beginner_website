@@ -1,0 +1,71 @@
+$grids: 12;
+
+%grid {
+  margin-left: -$gutter;
+  margin-bottom: $gutter;
+  width: calc(100% + #{$gutter});
+
+  @include clearfix;
+}
+
+%grid--dg {
+  margin-bottom: $gutter;
+  margin-left: -$gutter--x2;
+  width: calc(100% + #{$gutter--x2});
+
+  @include clearfix;
+}
+
+%grid--ng {
+  width: 100%;
+
+  @include clearfix;
+}
+
+%grid-gutter {
+  margin: 0 0 $gutter $gutter;
+  float: left;
+}
+
+%grid-gutter--dg {
+  margin: 0 0 $gutter--x2 $gutter--x2;
+  float: left;
+}
+
+%grid-gutter--dg-nb {
+  $gutter: $gutter * 2;
+  margin: 0 0 0 $gutter;
+  float: left;
+}
+
+
+@each $grid in $grids {
+  @for $i from 1 through $grid {
+    // With gutter
+    %col--#{$i}-#{$grid} {
+      width: calc((#{$i} / #{$grid}) * 100% - #{$gutter});
+    }
+
+    // Double gutter
+    %col--#{$i}-#{$grid}--dg {
+      width: calc((#{$i} / #{$grid}) * 100% - #{$gutter--x2});
+    }
+
+    // No gutter
+    %col--#{$i}-#{$grid}--ng {
+      width: calc((#{$i} / #{$grid}) * 100%);
+    }
+  }
+}
+
+@function col-size($i, $grid) {
+  @return calc((#{$i} / #{$grid}) * 100% - #{$gutter});
+}
+
+@function col-size--dg($i, $grid) {
+  @return calc((#{$i} / #{$grid}) * 100% - #{$gutter--x2});
+}
+
+@function col-size--ng($i, $grid) {
+  @return calc((#{$i} / #{$grid}) * 100%);
+}

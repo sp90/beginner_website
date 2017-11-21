@@ -1,0 +1,7 @@
+@mixin baseline($size: 38px, $extralines: 2) {
+  $lines: ceil($size / $font--size-base) + $extralines;
+  $total-spacing: $font--size-base * $lines - $size;
+
+  margin-top: ($total-spacing / 3) * 2;
+  margin-bottom: ($total-spacing / 3) * 1;
+}

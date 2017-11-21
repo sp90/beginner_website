@@ -1,0 +1,152 @@
+@keyframes arrowDown {
+  0% {
+    opacity: 0;
+    bottom: 40px;
+  }
+
+  20% {
+    opacity: 1;
+    bottom: 40px;
+  }
+
+  80% {
+    opacity: 1;
+    bottom: 20px;
+  }
+
+  100% {
+    opacity: 0;
+    bottom: 20px;
+  }
+}
+
+[custom-svg] {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.more-arrow {
+  @include arrow(30px, 1px, $g50);
+  opacity: 0;
+
+  position: absolute;
+  bottom: 20px;
+  animation: arrowDown 1.5s infinite;
+  animation-delay: 1s;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.custom-icon-loader {
+  @include custom-icon-loader(20px, $color--primary);
+}
+
+.custom-close {
+  $size: 30px;
+
+  position: absolute;
+  display: block;
+  width: $size;
+  height: $size;
+  cursor: pointer;
+  top: 0;
+  right: 0;
+
+  &:before,
+  &:after {
+    $height: 3px;
+
+    content: '';
+    display: block;
+    width: 100%;
+    height: $height;
+    background: #fff;
+    position: absolute;
+    border-radius: ($height / 2);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transform: rotate(45deg);
+    transition: transform 250ms ease;
+  }
+
+  &:after {
+    transform: rotate(-45deg);
+  }
+
+  &:hover {
+    &:before {
+      transform: rotate(-45deg);
+    }
+
+    &:after {
+      transform: rotate(45deg);
+    }
+  }
+}
+
+.custom-info {
+  border-radius: 50%;
+  border: 2px solid $g40;
+  color: $g40;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  font-weight: 700;
+  font-style: italic;
+  text-indent: -2px;
+  cursor: pointer;
+  transition: color 175ms ease, border-color 175ms ease;
+  padding: 2px 7px;
+  font-size: 13px;
+  display: inline-block;
+
+  &:hover {
+    border: 2px solid $g80;
+    color: $g80;
+  }
+}
+
+.custom-icon-dots {
+  display: flex;
+  flex-direction: column;
+
+  span {
+    $size: 6px;
+
+    width: $size;
+    height: $size;
+    margin-top: $size;
+    display: block;
+    border-radius: 100%;
+    background: #fff;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &.g25 {
+    span {
+      background: $g25;
+    }
+  }
+
+  &.center {
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.small {
+    span {
+      $size: 4px;
+
+      width: $size;
+      height: $size;
+      margin-top: $size;
+    }
+  }
+}

@@ -1,0 +1,74 @@
+/**
+ *	Fonts
+ */
+
+$font--size-base: 14px;
+$font--line-base: 22px;
+
+$font-family--base: 'Bariol', sans-serif;
+
+/**
+ *	Colors
+ */
+
+$color--primary: #00ad64;
+$color--primary-light: #00db7f;
+$color--primary-dark: #007644;
+
+$gradient--primary: linear-gradient(135deg, #{$color--primary-light} 0%, #1fe0a3 100%);
+$gradient--primary-dark: linear-gradient(135deg, #05b06b 0%, #18b382 100%);
+
+$color--canvas: #f3f3f3;
+$color--header: #333;
+
+$color--form-border: #c5c5c5;
+$color--form-border--active: #00db7f;
+
+$color--form-error: #c55353;
+$color--form-success: #7db774;
+
+$color--form-pending: #eada1a;
+$color--form-warning: #d90;
+
+$color--highlight: #ea971a;
+$color--highlight-blue: #4569b1;
+$color--highlight-green: #45b186;
+
+$g95: #141414;
+$g90: #212121;
+$g80: #333;
+$g70: #444;
+$g60: #6e6e6e;
+$g50: #808080;
+$g40: #aaa;
+$g25: #ccc;
+$g20: #dbdbdb;
+$g15: #e9e9e9;
+$g10: #f1f1f1;
+$g5: #f6f6f6;
+$g4: #f9f9f9;
+
+/**
+ *  Spacing / Gutter / Height
+ */
+$gutter: 15px;
+$gutter--x2: $gutter * 2;
+$gutter--x3: $gutter * 3;
+$gutter--x4: $gutter * 4;
+$gutter--x5: $gutter * 5;
+$gutter--x6: $gutter * 6;
+$gutter--x7: $gutter * 7;
+$gutter--x8: $gutter * 8;
+
+$navbar: 100px;
+$navbar--open: 120px;
+
+/**
+ *  Breakpoints
+ */
+$bp-giga: 2500px;
+$bp-mega: 1900px;
+$bp-kilo: 1360px;
+$bp-centi: 1024px;
+$bp-milli: 768px;
+$bp-nano: 480px;

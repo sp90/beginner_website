@@ -1,0 +1,8 @@
+@function col($dividers, $spacing: $gutter) {
+  // If only 2 then half $spacing
+  @if $dividers == 2 {
+    $spacing: $spacing / 2;
+  }
+
+  @return calc(100% / #{$dividers} - #{$spacing});
+}

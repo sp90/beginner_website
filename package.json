@@ -1,0 +1,60 @@
+{
+  "name": "boilerplate-javascript",
+  "version": "1.0.0",
+  "description": "A boilerplate javascript project",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "prestart": "echo \"\\x1b[32m\\033[4mInstalling dependencies:\" && npm install && echo \"\\x1b[32mdone.\\033[0m\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/contentful/boilerplate-javascript.git"
+  },
+  "engines": {
+    "node": ">=4.7.2"
+  },
+  "keywords": [
+    "Contentful",
+    "boilerplate",
+    "Getting-Started"
+  ],
+  "author": "Khaled Garbaya <khaled@contentful.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/contentful/boilerplate-javascript/issues"
+  },
+  "homepage": "https://github.com/contentful/boilerplate-javascript#readme",
+  "dependencies": {
+    "compression": "^1.7.1",
+    "config": "^1.28.1",
+    "consolidate": "^0.15.0",
+    "contentful": "^3.8.0",
+    "contentful-management": "^3.3.4",
+    "express": "^4.16.2",
+    "gulp": "github:gulpjs/gulp#4.0",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-flatten": "^0.3.1",
+    "gulp-htmlmin": "^2.0.0",
+    "gulp-if": "^2.0.1",
+    "gulp-imagemin": "^3.0.1",
+    "gulp-jscs": "^3.0.2",
+    "gulp-livereload": "^3.8.1",
+    "gulp-lodash-builder": "git+https://github.com/sp90/gulp-lodash-builder.git",
+    "gulp-purifycss": "^0.2.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-sass": "^2.0.1",
+    "gulp-sass-glob-import": "^0.1.0",
+    "gulp-sass-lint": "^1.1.1",
+    "gulp-slack": "^0.1.2",
+    "gulp-sourcemaps": "^1.12.0",
+    "gulp-svg-symbols": "^2.0.2",
+    "gulp-uglify": "^1.5.3",
+    "js-yaml": "^3.6.1",
+    "lodash": "^4.17.4",
+    "morgan": "^1.9.0",
+    "swig-templates": "^2.0.2"
+  }
+}

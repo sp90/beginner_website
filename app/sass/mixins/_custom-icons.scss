@@ -1,0 +1,118 @@
+@mixin arrow($size: 30px, $thickness: 2px, $color: #fff, $direction: 'down', $shadow: false) {
+  $rotation: 135deg;
+
+  @if $direction == 'up' {
+    $rotation: -45deg;
+  } @else if $direction == 'right' {
+    $rotation: 45deg;
+  } @else if $direction == 'down' {
+    $rotation: 135deg;
+  } @else if $direction == 'left' {
+    $rotation: 225deg;
+  }
+
+  &::after {
+    content: '';
+    position: relative;
+    display: inline-block;
+    width: $size;
+    height: $size;
+    border-right: $thickness solid $color;
+    border-top: $thickness solid $color;
+    transform: rotate(#{$rotation});
+  }
+
+  @if $direction == 'cross' {
+    &::after {
+      $rotation: -45deg;
+      $space: null;
+
+      @if $thickness == 1px {
+        $space: 3px;
+      } @else {
+        $space: 2px;
+      }
+
+      transform: rotate(#{$rotation}) translate(-#{$space}, #{$space});
+
+      @if $shadow == true {
+        box-shadow: 1px -1px 1px rgba(0, 0, 0, .15);
+      }
+    }
+
+    &::before {
+      $rotation: 135deg;
+
+      content: '';
+      position: relative;
+      display: block;
+      width: $size;
+      height: $size;
+      border-right: $thickness solid $color;
+      border-top: $thickness solid $color;
+      transform: rotate(#{$rotation});
+
+      @if $shadow == true {
+        box-shadow: 1px -1px 1px rgba(0, 0, 0, .15);
+      }
+    }
+  }
+}
+
+@mixin custom-icon-loader($size: 24px, $color: #fff, $border-width: 2px, $double: false) {
+  $border-color: rgba($color, .2);
+
+  animation: spin 1s infinite linear;
+  border: $border-width solid $border-color;
+  border-radius: 50%;
+  border-top-color: $color;
+  height: $size;
+  width: $size;
+
+  @if $double == true {
+    border-style: double;
+    border-width: ($border-width * 2);
+  }
+}
+
+@mixin custom-icon-cross($color: $color--primary, $size: 20px, $thickness: 1px) {
+  display: block;
+  width: $size;
+  height: $size;
+  cursor: pointer;
+  z-index: 10;
+
+  &::after,
+  &::before {
+    content: '';
+    display: block;
+    width: $size;
+    height: $thickness;
+    background: $color;
+    position: absolute;
+    transition: transform 250ms ease;
+    top: 50%;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    transform-origin: center center;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+    transform-origin: center center;
+  }
+
+  &:hover {
+    &::before {
+      transform: rotate(-45deg);
+      transform-origin: center center;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+      transform-origin: center center;
+    }
+  }
+}

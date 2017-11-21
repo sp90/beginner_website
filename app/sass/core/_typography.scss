@@ -1,0 +1,33 @@
+
+/**
+ *  Turn on and off for fonts if needed
+ */
+
+$thin:    true;
+$light:   true;
+$regular: true;
+$bold:    true;
+
+/**
+ *  Bariol font
+ */
+
+@if $thin == true {
+  @include font-face('bariol', '/public/assets/bariol_thin', 100);
+  @include font-face('bariol', '/public/assets/bariol_thin_italic', 100, italic);
+}
+
+@if $light == true {
+  @include font-face('bariol', '/public/assets/bariol_light', 200);
+  @include font-face('bariol', '/public/assets/bariol_light_italic', 200, italic);
+}
+
+@if $regular == true {
+  @include font-face('bariol', '/public/assets/bariol_regular', 400);
+  @include font-face('bariol', '/public/assets/bariol_regular_italic', 400, italic);
+}
+
+@if $bold == true {
+  @include font-face('bariol', '/public/assets/bariol_bold', 700);
+  @include font-face('bariol', '/public/assets/bariol_bold_italic', 700, italic);
+}

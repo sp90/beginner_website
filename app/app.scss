@@ -1,0 +1,17 @@
+/**
+ *	Main app scss
+ */
+// Settings
+@import 'sass/variables';
+
+// Mixins
+@import 'sass/mixins/**/*';
+
+// Helpers
+@import 'sass/helpers/**/*';
+
+// Core
+@import 'sass/core/**/*';
+
+// Views
+@import 'views/**/*';

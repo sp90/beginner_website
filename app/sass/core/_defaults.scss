@@ -1,0 +1,171 @@
+h1,
+.h1 {
+  $size: 64px;
+
+  @include baseline($size);
+
+  font-size: $size;
+  line-height: $size;
+  min-height: $size;
+  font-weight: 400;
+
+  @include breakpoint(-milli) {
+    $size: 38px;
+
+    @include baseline($size);
+
+    font-size: $size;
+    line-height: $size;
+    min-height: $size;
+    font-weight: 400;
+  }
+}
+
+h2,
+.h2 {
+  $size: 38px;
+
+  @include baseline($size);
+
+  font-size: $size;
+  line-height: $size;
+  min-height: $size;
+  font-weight: 400;
+
+  @include breakpoint(-milli) {
+    $size: 28px;
+
+    @include baseline($size);
+
+    font-size: $size;
+    line-height: $size;
+    min-height: $size;
+    font-weight: 400;
+  }
+}
+
+h3,
+.h3 {
+  $size: 28px;
+
+  @include baseline($size);
+
+  font-size: $size;
+  line-height: $size + 4px;
+  min-height: $size + 4px;
+  font-weight: 400;
+
+  @include breakpoint(-milli) {
+    $size: 24px;
+
+    @include baseline($size);
+
+    font-size: $size;
+    line-height: $size;
+    min-height: $size;
+    font-weight: 400;
+  }
+}
+
+h4,
+.h4 {
+  $size: 24px;
+
+  @include baseline($size);
+
+  font-size: $size;
+  line-height: $size;
+  min-height: $size;
+  font-weight: 400;
+
+  @include breakpoint(-milli) {
+    $size: 20px;
+
+    @include baseline($size);
+
+    font-size: $size;
+    line-height: $size;
+    min-height: $size;
+    font-weight: 400;
+  }
+}
+
+h5,
+.h5 {
+  $size: 18px;
+
+  @include baseline($size);
+
+  font-size: $size;
+  line-height: $size;
+  min-height: $size;
+  font-weight: 600;
+
+  @include breakpoint(-milli) {
+    $size: 16px;
+
+    @include baseline($size);
+
+    font-size: $size;
+    line-height: $size;
+    min-height: $size;
+    font-weight: 700;
+  }
+}
+
+p {
+  font-family: $font-family--base;
+  font-size: $font--size-base;
+  line-height: $font--line-base;
+  font-weight: 400;
+  word-wrap: break-word;
+
+  margin: 0 0 $gutter;
+}
+
+blockquote {
+  @extend p;
+
+  font-style: italic;
+  padding: $gutter $gutter--x2;
+  border-left: 5px solid $g95;
+}
+
+a {
+  color: $g50;
+  cursor: pointer;
+  transition: color 225ms ease;
+
+  &:hover,
+  &:focus {
+    color: $g40;
+  }
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4 {
+  font-family: $font-family--base;
+  color: $color--header;
+
+  &.first {
+    margin-top: 0;
+  }
+
+  &.no-margin {
+    margin: 0;
+  }
+}
+
+.clear {
+  @include clearfix;
+}
+
+.center {
+  text-align: center;
+}

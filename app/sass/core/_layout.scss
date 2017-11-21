@@ -1,0 +1,34 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+}
+
+body {
+  color: $color--header;
+  font-family: $font-family--base;
+  font-size: $font--size-base;
+  line-height: $font--line-base;
+  font-weight: 400;
+
+  margin: 0;
+  background: #fff;
+  display: flex;
+  -webkit-font-smoothing: antialiased;
+}
+
+.main {
+  @include overflowScrolling;
+
+  position: relative;
+  flex: 1 0 auto;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.clear-both {
+  @include clearfix;
+}
