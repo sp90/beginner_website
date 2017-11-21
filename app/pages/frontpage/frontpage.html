@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block head %}
+	{% parent %}
+	{# Custom html #}
+{% endblock %}
+
+{% block content %}
+	<h1>
+		Frontpage
+	</h1>
+
+	{% for item in liste %}
+		{% if loop.first %}<div class="features">{% endif %}
+			<div class="features__item">
+				name: {{ item.name }}<br />
+				age: {{ item.age }}
+			</div>
+		{% if loop.last %}</div>{% endif %}
+	{% endfor %}
+
+	<form action="/create/user" method="post">
+		<div>
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="user_name">
+		</div>
+		<div>
+			<label for="mail">E-mail:</label>
+			<input type="email" id="mail" name="user_mail">
+		</div>
+		<div>
+			<label for="msg">Message:</label>
+			<textarea id="msg" name="user_message"></textarea>
+		</div>
+
+		<button type="submit">
+			Send
+		</button>
+	</form>
+
+{% endblock %}
